@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Reporte - CuscoReporta</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="/" class="logo">CuscoReporta</a>
+    <div class="nav-links" id="nav-links">
+      <!-- JS llenará esto -->
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-container" style="max-width: 600px;">
+      <h1>Crear Nuevo Reporte</h1>
+      <form id="report-form">
+        <div class="form-group">
+          <label for="titulo">Título del Reporte</label>
+          <input type="text" id="titulo" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="categoriaId">Categoría</label>
+          <select id="categoriaId">
+            <option value="1">Vías y Pistas</option>
+            <option value="2">Alumbrado Público</option>
+            <option value="3">Residuos Sólidos</option>
+            <option value="4">Agua y Desagüe</option>
+            <option value="5">Seguridad Ciudadana</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Ubicación (Coordenadas)</label>
+          <div style="display: flex; gap: 10px;">
+            <input type="number" id="latitud" placeholder="Latitud" step="any" required value="-13.53195">
+            <input type="number" id="longitud" placeholder="Longitud" step="any" required value="-71.96746">
+          </div>
+        </div>
+        <button type="submit" class="btn">Enviar Reporte</button>
+      </form>
+      <div id="message"></div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

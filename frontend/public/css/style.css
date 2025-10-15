@@ -1,0 +1,13 @@
+
+/* Estilos personalizados para CuscoReporta */
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 0;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
